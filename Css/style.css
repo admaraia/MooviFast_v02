@@ -1,0 +1,536 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  inherits: 0px;
+}
+html {
+  font-family: Roboto, sans-serif;
+}
+section {
+  width: 100%;
+}
+/* Barra de navegação */
+header {
+  background: #fbb613;
+  height: 15vh;
+  box-shadow: 0px 6px 6px 0px #00000040;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  width: 100%;
+  height: 50px;
+}
+.menu ul {
+  position: relative;
+  margin-right: 15px;
+}
+
+/*.menu li a {
+  float: left;
+  color: black;
+  text-decoration: none;
+  padding: 50px 10px;
+  display: block;
+  text-shadow: #c0c0c0 1px 1px;
+  font-size: 18px;
+  justify-content: flex-end;
+} */
+
+.menu a {
+  padding: 15px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+}
+
+.menu ul ul {
+  position: absolute;
+  visibility: hidden;
+}
+
+/*Estilizando as listas */
+.menu ul {
+  list-style: none;
+  position: relative;
+}
+
+.menu ul li {
+  width: 150px;
+  float: left;
+}
+
+.menu ul li:hover ul {
+  visibility: visible;
+}
+
+.menu a:hover {
+  background-color: #f4f4f4;
+  color: #555;
+}
+
+.menu ul ul li {
+  float: none;
+  border-bottom: solid 1px #ccc;
+}
+
+.menu ul ul li a {
+  background-color: #069;
+}
+
+#bt_menu {
+  display: none;
+}
+
+label[for="”bt_menu”"] {
+  display: none;
+}
+
+/* a classe "logo" foi criada para 
+juntar logo com titulo */
+
+.logo {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+}
+
+.logo h2 {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 75px;
+  letter-spacing: 0em;
+  text-align: left;
+  justify-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+/* configuração dos links */
+a {
+  transition: all 0.4s;
+}
+
+a:hover {
+  text-decoration: none;
+  color: grey;
+}
+/* Bloco para separar seções*/
+
+#nav {
+  background: #fbb613;
+  height: 4vh;
+  box-shadow: 0px 6px 6px 0px #00000040;
+  margin-bottom: 5px;
+}
+
+/* bloco página inicial */
+
+#home {
+  background: #ffffff;
+}
+
+#home h2 {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  color: #5f6c72;
+  text-shadow: gainsboro 2px 2px;
+}
+
+#home img {
+  width: 100%;
+  opacity: 0.9;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+#home p {
+  padding-top: 80px;
+  width: 100%;
+  text-align: justify;
+  font-size: 18px;
+  color: #5f6c72;
+}
+.home_espaco {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-right: 30px;
+}
+
+.home_espaco a {
+  color: #059862;
+}
+
+/* bloco página Quem somos */
+#qsomos {
+  background: #ffffff;
+}
+
+#qsomos h2 {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 30px;
+  padding-bottom: 5px;
+  color: #5f6c72;
+  text-shadow: gainsboro 2px 2px;
+}
+
+#qsomos p {
+  padding-top: 40px;
+  width: 80%;
+  text-align: justify;
+  font-size: 18px;
+  color: #5f6c72;
+  margin-bottom: 50px;
+  margin-left: 80px;
+}
+
+.video {
+  overflow: hidden;
+  position: relative;
+  width: 90%;
+  align-items: center;
+}
+
+.video::after {
+  padding-top: 56.25%;
+  display: block;
+  content: "";
+}
+
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 80px;
+  width: 90%;
+  height: 90%;
+}
+
+/* bloco página Como funciona */
+#cfunciona {
+  background: #ffffff;
+}
+
+#cfunciona h2 {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 30px;
+  padding-bottom: 5px;
+  color: #5f6c72;
+  text-shadow: gainsboro 2px 2px;
+}
+
+#cfunciona img {
+  width: 50%;
+  opacity: 0.9;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.cfunciona_espaco {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#cfunciona p {
+  padding-top: 00px;
+  width: 80%;
+  text-align: justify;
+  font-size: 18px;
+  color: #5f6c72;
+  margin-bottom: 50px;
+  margin-right: 30px;
+}
+
+/* bloco página login */
+
+#entrar {
+  background: #ffffff;
+}
+
+#entrar h2 {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 30px;
+  padding-bottom: 5px;
+  color: #5f6c72;
+  text-shadow: gainsboro 2px 2px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  height: 60vh;
+}
+
+.container-login {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background: var(--white-color);
+}
+
+.wrap-login {
+  width: 370px;
+  margin-right: 10px;
+  background: var(--white-color);
+}
+
+/*
+  Formulário
+*/
+
+.login-form {
+  width: 100%;
+}
+
+/*
+  Input
+*/
+
+.wrap-input {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid var(--line-input);
+}
+
+.input-form {
+  font-family: roboto, sans-serif;
+  font-size: 18px;
+  color: var(--input-text);
+  line-height: 1.2;
+  display: block;
+  width: 100%;
+  height: 52px;
+  background: rgba(196, 196, 196, 0.3);
+  padding: 0 5px;
+}
+
+.focus-input-form {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.focus-input-form::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: all 0.4s;
+  background: var(--main-color);
+}
+
+.focus-input-form::after {
+  font-family: roboto, sans-serif;
+  font-size: 18px;
+  color: var(--text1);
+  line-height: 1.2;
+  content: attr(data-placeholder);
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  padding-left: 5px;
+  transition: all 0.4s;
+}
+
+.input-form:focus + .focus-input-form::after {
+  top: -20px;
+  font-size: 15px;
+}
+
+.input-form:focus + .focus-input-form::before {
+  width: 100%;
+}
+
+.has-val.input-form + .focus-input-form::after {
+  top: -20px;
+  font-size: 15px;
+}
+
+.has-val.input-form + .focus-input-form::before {
+  width: 100%;
+}
+/*
+  Botão
+*/
+
+.container-login-form-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-form-btn {
+  font-family: roboto, sans-serif;
+  font-size: 16px;
+  color: var(--white-color);
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 50%;
+  height: 30px;
+  background-color: #fbb613;
+  border-radius: 5px;
+  transition: all 0.4s;
+}
+
+.login-form-btn:hover {
+  background-color: #5f6c72;
+}
+/*
+  Links - Login utils
+*/
+
+a {
+  font-family: roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--link-color);
+  margin: 0px;
+  transition: all 0.4s;
+}
+
+a:focus {
+  outline: none !important;
+}
+
+/*
+Login utils
+*/
+
+.login-utils {
+  margin-top: 10px;
+}
+
+.login-utils li {
+  position: relative;
+  padding-left: 16px;
+}
+
+.login-utils li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--point-list);
+  top: 45%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+input,
+button {
+  outline: none !important;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.margin-bottom-35 {
+  margin-bottom: 35px;
+}
+
+.margin-top-35 {
+  margin-top: 35px;
+}
+
+.margin-bottom-8 {
+  margin-bottom: 8px;
+}
+
+.margin-top-8 {
+  margin-top: 8px;
+}
+
+.margin-left-50 {
+  margin-left: 50px;
+}
+
+/* bloco rodapé */
+footer {
+  background: rgba(196, 196, 196, 0.3);
+  width: 100%;
+  height: 4vh;
+}
+
+footer p {
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+  padding-top: 10px;
+}
+/* responsivo */
+@media (max-width: 852px) {
+  label[for="”bt_menu”"] {
+    display: block;
+  }
+
+  #bt_menu:checked ~ .menu {
+    margin-left: 0;
+  }
+
+  .menu {
+    margin-top: 5px;
+    margin-left: -100%;
+    transition: all 0.4s;
+  }
+
+  .menu ul li {
+    width: 100%;
+    float: none;
+  }
+
+  .menu ul ul {
+    position: static;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 4s;
+  }
+
+  .menu ul li:hover ul {
+    height: auto;
+    max-height: 200px;
+  }
+}
